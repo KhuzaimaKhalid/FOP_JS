@@ -1,0 +1,16 @@
+let str = "Khuzaima"
+
+console.log(str.length)
+console.log(str[0])
+console.log(str[str.length - 1])
+console.log(str.toUpperCase())
+console.log(str.toLowerCase())
+console.log(str.includes("zai"))
+console.log(str.startsWith("k"))
+console.log(str.startsWith("h"))
+console.log(str.endsWith("a"))
+console.log(str.endsWith("k"))
+console.log(str.indexOf("i"))
+console.log(str.slice(1,4))
+console.log(str.slice(3))
+console.log(str.replace("Khuzaima", "John"))
