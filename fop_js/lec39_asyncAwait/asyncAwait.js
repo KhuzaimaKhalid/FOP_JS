@@ -54,3 +54,24 @@ async function result(){
     console.log("All tasks are done!")
 }
 result()
+
+async function getFile() {
+    let myPromise = new Promise(function(resolve) {
+      let req = new XMLHttpRequest()
+      req.open('GET', "large.docx")
+      req.responseType = "arraybuffer" 
+      req.onload = function() {
+        if (req.status == 200) {
+          resolve(req.response)
+        } else {
+          resolve("File not Found")
+        }
+      };
+      req.send()
+    });
+    let response = await myPromise
+    let result = await mammoth.extractRawText({arrayBuffer: response})
+    document.getElementById("myp1").textContent = result.value
+  }
+  
+  getFile();
