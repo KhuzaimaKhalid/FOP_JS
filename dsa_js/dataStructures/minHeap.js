@@ -12,7 +12,7 @@ class minHeap{
     }
 
     parent(key){
-        return (key-1)/2
+        return Math.floor((key-1)/2)
     }
 
     leftChild(key){
