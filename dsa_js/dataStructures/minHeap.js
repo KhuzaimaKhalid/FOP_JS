@@ -48,6 +48,7 @@ class minHeap{
 }
 
 m = new minHeap()
+console.log("Binary Heap - Min Heap")
 m.insert(10)
 m.insert(5)
 m.insert(20)
